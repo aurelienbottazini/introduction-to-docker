@@ -1,0 +1,19 @@
+db_postgres:
+  image: postgres:9.4.5
+
+db_my_other_postgres:
+  image: postgres:9.2
+
+db_redis:
+  image: redis:3.0.4
+
+web:
+  build: .
+  links:
+    - db_postgres
+    - db_my_other_postgres
+    - db_redis
+  ports:
+    - 80:3000
+  volumes:
+    - .:/my_app
