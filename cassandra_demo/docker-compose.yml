@@ -1,0 +1,14 @@
+db:
+  build: cassandra
+  ports:
+    - "7000:7000"
+
+web:
+  build: .
+  links:
+    - db
+  ports:
+    - "3123:3123"
+  volumes:
+    - /vins-api:/vins-api
+  command: nodejs server.js
