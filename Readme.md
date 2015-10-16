@@ -18,7 +18,7 @@
   + `docker run -it haskell`
   + `docker run -it node`
 
-* list running containers `docker ps`
+* List running containers `docker ps`
 
 * Kill a container `docker kill container_id`. You get the container id with `docker ps`
 
