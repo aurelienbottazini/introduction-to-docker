@@ -32,13 +32,15 @@
 
   Using only docker
 
+  + `cd hello_world_demo` 
   + Build your image and name it *hello_world_image* `docker build -t hello_world_image .`
   + Run it `docker run -p 3000:3000 -v $(pwd):/my_app hello_world_image node /my_app/index.js`  
 
 # db_demo
 
-  Taking advantage of docker-compose for cleaner/shorter commands
+  Taking avantage of docker-compose for cleaner/shorter commands
 
+  + `cd db_demo`
   + `docker-compose build`
   + `docker-compose up`
 
