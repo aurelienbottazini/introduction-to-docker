@@ -32,8 +32,8 @@
 
   Using only docker
 
-  + Build your image `docker build -t hello_world_image .`
-  + Run it `docker run -p 3000:3000 -v $(pwd):/my_app hello_world node /my_app/index.js`  
+  + Build your image and name it *hello_world_image* `docker build -t hello_world_image .`
+  + Run it `docker run -p 3000:3000 -v $(pwd):/my_app hello_world_image node /my_app/index.js`  
 
 # db_demo
 

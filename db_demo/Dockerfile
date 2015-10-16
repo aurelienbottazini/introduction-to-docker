@@ -8,7 +8,6 @@ RUN apt-get install -y nodejs npm
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 RUN npm install express --save
-RUN npm install cassandra-driver --save
 RUN npm instal pg --save
 RUN npm install redis --save
 
