@@ -59,8 +59,8 @@
 + AUFS: recommended one. However was never accepted in main linux kernel so alternatives are appearing.
 + DeviceMapper: default one on centos before centos7. Perfomance is reasonable but is reasonable but not _speedy_ when using the loopback mode (default)
 + BTRFS: a copy on write filesystem so good fit  for docker image model. Pretty stable in production and good performer.
-+ VFS: simple and slow. Does not support copy-on-write. Intead it makes a new directory and copies over all existing data. Not recommended by docker in production and feel up your disk space really quickly
-+ overlayfs: supported in the mainline linux kernel as of version 3.18. Very good performance, active development. This is the *future*
++ VFS: simple and slow. Does not support copy-on-write. Intead it makes a new directory and copies over all existing data. Not recommended by docker in production and fill up your disk space really quickly
++ overlayfs: supported in the mainline linux kernel as of version 3.18. Very good performance, active development. This is the *future*.
 
  So as of today for me. AUFS > BTRFS > Overlayfs.
 
@@ -77,7 +77,7 @@
 + Deployment framework (capistrano)
   A container encapsulate all dependencies but can't automate a complex deployment process
 + Dev env (Vagrant, otto)
-  boot2docker and docker machine are good for most workflows. But things like vagrant give much more feature.
+  boot2docker and docker machine are good for most workflows. But things like vagrant give much more features.
 
 
 This being said. Using docker *with* those tools will simplify and add robustness to your environment.
